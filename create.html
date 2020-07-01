@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- 一般的に問合せフォームとかPOSTになる -->
+<form action="" method="POST">{% csrf_token %}
+  <!-- どのデータ型fieldを出力させるか -->
+  {{ form.as_p }}
+  <!-- submitでフォーム送信ボタン -->
+  <input type="submit" value="作成する">
+</form>
+{% endblock %}
